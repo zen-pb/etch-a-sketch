@@ -1,0 +1,34 @@
+*,
+*::before,
+a::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    user-select: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    background-color: #0D0202;
+    padding: 10vh;
+}
+
+.base {
+    background-color: #B9141B;
+}
+
+.title {
+    color: #CAEA26;
+}
+
+.copyright {
+    color: #1E1E1E;
+}
