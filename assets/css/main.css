@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
 *,
 *::before,
 a::after {
     box-sizing: border-box;
     margin: 0;
-    font-family: "Poppins", sans-serif;
     user-select: none;
 }
 
@@ -17,14 +18,66 @@ body {
     background-color: #B9141B;
 }
 
-.title {
-    color: #CAEA26;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-footer {
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    margin-left: 8vw;
+    padding: 1.5vh 0;
+}
+
+.title {
+    color: #CAEA26;
+    font-family: "Sacramento", cursive;
+    font-size: 45px;
+}
+
+.subtitle {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 5px;
+    justify-content: flex-start;
+    font-family: "Poppins", sans-serif;
     color: #1E1E1E;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.screen {
+    height: 70vh;
+    margin: 0 11vw;
+    border: 6px solid #891016;
+    border-radius: 11px;
+    background-color: #D9D9D9;
+}
+
+.knobs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 100vh;
+}
+
+.knobs button {
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 150px;
+    background-color: #B9141B;
+}
+
+.knobs button:hover {
+    cursor: pointer;
 }
