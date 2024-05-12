@@ -14,14 +14,6 @@ img {
 html,
 body {
     height: 100vh;
-}
-
-body {
-    background-color: #0D0202;
-    padding: 10vh;
-}
-
-.base {
     background-color: #B9141B;
 }
 
@@ -29,6 +21,10 @@ body {
     color: #CAEA26;
 }
 
-.copyright {
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     color: #1E1E1E;
 }
