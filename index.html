@@ -3,41 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/icon.png" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Etch-a-Sketch</title>
   </head>
   <body>
-    <main class="base">
-      <div class="header">
-        <p class="title">Etch A Sketch</p>
-        <div class="subtitle">
-          <p>Copyright © 2024 zen-pb</p>
-          <img
-            src="./assets/images/github-mark.svg"
-            width="30"
-            height="30"
-            alt="github"
-          />
+    <main>
+      <div class="options">
+        <div class="pallette">
+          <p>Pallette</p>
+          <input type="color" id="colorPicker" value="#0e1111" />
+          <button id="classic">Classic</button>
+          <button id="rainbow">Rainbow</button>
+          <button id="eraser">Eraser</button>
+          <button id="clear">Clear</button>
+        </div>
+        <div class="canvas-settings">
+          <p>Canvas Settings</p>
+          <button id="8by">8 x 8</button>
+          <button id="16by">16 x 16</button>
+          <button id="32by">32 x 32</button>
+          <span>
+            Custom
+            <input type="text" id="customSize" />
+          </span>
         </div>
       </div>
-      <div id="screen" class="screen"></div>
-      <div class="knobs">
-        <button>
+      <div class="base">
+        <div class="header">
+          <p class="title">Etch A Sketch</p>
+          <div class="subtitle">
+            <p>Copyright © 2024 zen-pb</p>
+            <img
+              src="./assets/images/github-mark.svg"
+              width="30"
+              height="30"
+              alt="github"
+            />
+          </div>
+        </div>
+        <div id="screen" class="screen"></div>
+        <div class="knobs">
           <img
             src="./assets/images/knob.svg"
             width="112.5"
             height="112.5"
             alt="left knob"
           />
-        </button>
-        <button>
+
           <img
             src="./assets/images/knob.svg"
             width="112.5"
             height="112.5"
             alt="right knob"
           />
-        </button>
+        </div>
       </div>
     </main>
     <script src="./assets/src/etch.js"></script>
