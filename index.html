@@ -9,29 +9,9 @@
   </head>
   <body>
     <main>
-      <div class="options">
-        <div class="pallette">
-          <p>Pallette</p>
-          <input type="color" id="colorPicker" value="#0e1111" />
-          <button id="classic">Classic</button>
-          <button id="rainbow">Rainbow</button>
-          <button id="eraser">Eraser</button>
-          <button id="clear">Clear</button>
-        </div>
-        <div class="canvas-settings">
-          <p>Canvas Settings</p>
-          <button id="8by">8 x 8</button>
-          <button id="16by">16 x 16</button>
-          <button id="32by">32 x 32</button>
-          <span>
-            Custom
-            <input type="text" id="customSize" />
-          </span>
-        </div>
-      </div>
       <div class="base">
         <div class="header">
-          <p class="title">Etch A Sketch</p>
+          <p class="title yellow cursive">Etch A Sketch</p>
           <div class="subtitle">
             <p>Copyright © 2024 zen-pb</p>
             <img
@@ -57,6 +37,32 @@
             height="112.5"
             alt="right knob"
           />
+        </div>
+      </div>
+      <div class="options">
+        <div class="pallette">
+          <p class="yellow cursive">Pallette</p>
+          <div class="container">
+            <input type="color" id="colorPicker" value="#0e1111" />
+            <div class="pallette-buttons">
+              <button id="classic" class="cursive">Classic</button>
+              <button id="rainbow" class="cursive">Rainbow</button>
+              <button id="eraser" class="cursive">Eraser</button>
+              <button id="clear" class="cursive">Clear</button>
+            </div>
+          </div>
+        </div>
+        <div class="canvas-settings">
+          <p class="yellow cursive">Canvas Settings</p>
+          <div class="by-buttons">
+            <button id="8by" class="cursive">8 x 8</button>
+            <button id="16by" class="cursive">16 x 16</button>
+            <button id="32by" class="cursive">32 x 32</button>
+          </div>
+          <span class="input-span yellow cursive">
+            Custom
+            <input type="number" id="customSize" min="1" max="100"/>
+          </span>
         </div>
       </div>
     </main>
