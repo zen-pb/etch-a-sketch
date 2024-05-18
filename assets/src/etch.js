@@ -1,11 +1,14 @@
 const screen = document.querySelector("#screen");
-const palletteButtons = document.querySelectorAll("#palletteButtons button");
 const colorPicker = document.querySelector("#colorPicker");
+const palletteButtons = document.querySelectorAll("#palletteButtons button");
+const canvasSetButtons = document.querySelectorAll("#canvasSetButtons button");
 
 document.addEventListener("DOMContentLoaded", () => {
+  let currentScreenSize = 16;
   let currentPen = "classic";
   let customColor = colorPicker.value;
-  generateScreen();
+
+  generateScreen(currentScreenSize);
   drawingPen(currentPen);
 
   colorPicker.addEventListener("input", () => {
@@ -30,8 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
           drawingPen(currentPen);
           break;
         case "clear":
-          screen.innerHTML = "";
-          generateScreen();
+          regenerateScreen(currentScreenSize);
           if (currentPen === "custom") {
             drawingPen(customColor);
           } else {
@@ -41,9 +43,28 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  canvasSetButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      switch (button.id) {
+        case "8by":
+          regenerateScreen((currentScreenSize = 8));
+          drawingPen(currentPen);
+          break;
+        case "16by":
+          regenerateScreen((currentScreenSize = 16));
+          drawingPen(currentPen);
+          break;
+        case "32by":
+          regenerateScreen((currentScreenSize = 32));
+          drawingPen(currentPen);
+          break;
+      }
+    });
+  });
 });
 
-function generateScreen(screenSize = 16) {
+function generateScreen(screenSize) {
   const divSize = 600 / screenSize - 2;
 
   for (let i = 0; i < screenSize * screenSize; i++) {
@@ -85,4 +106,9 @@ function drawingPen(pen) {
       }
     });
   });
+}
+
+function regenerateScreen(currentScreenSize) {
+  screen.innerHTML = "";
+  generateScreen(currentScreenSize);
 }
