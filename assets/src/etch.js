@@ -2,6 +2,7 @@ const screen = document.querySelector("#screen");
 const colorPicker = document.querySelector("#colorPicker");
 const palletteButtons = document.querySelectorAll("#palletteButtons button");
 const canvasSetButtons = document.querySelectorAll("#canvasSetButtons button");
+const customCanvasSize = document.querySelector("#customSize");
 
 document.addEventListener("DOMContentLoaded", () => {
   let currentScreenSize = 16;
@@ -61,6 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
       }
     });
+  });
+
+  customCanvasSize.addEventListener("input", () => {
+    regenerateScreen((currentScreenSize = customCanvasSize.value));
+    drawingPen(currentPen);
   });
 });
 
