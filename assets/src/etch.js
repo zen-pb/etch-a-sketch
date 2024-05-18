@@ -1,8 +1,46 @@
 const screen = document.querySelector("#screen");
+const palletteButtons = document.querySelectorAll("#palletteButtons button");
+const colorPicker = document.querySelector("#colorPicker");
 
 document.addEventListener("DOMContentLoaded", () => {
+  let currentPen = "classic";
+  let customColor = colorPicker.value;
   generateScreen();
-  drawingPen("rainbow");
+  drawingPen(currentPen);
+
+  colorPicker.addEventListener("input", () => {
+    customColor = colorPicker.value;
+    currentPen = "custom";
+    drawingPen(customColor);
+  });
+
+  palletteButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      switch (button.id) {
+        case "classic":
+          currentPen = "classic";
+          drawingPen(currentPen);
+          break;
+        case "rainbow":
+          currentPen = "rainbow";
+          drawingPen(currentPen);
+          break;
+        case "eraser":
+          currentPen = "eraser";
+          drawingPen(currentPen);
+          break;
+        case "clear":
+          screen.innerHTML = "";
+          generateScreen();
+          if (currentPen === "custom") {
+            drawingPen(customColor);
+          } else {
+            drawingPen(currentPen === "eraser" ? "classic" : currentPen);
+          }
+          break;
+      }
+    });
+  });
 });
 
 function generateScreen(screenSize = 16) {
@@ -15,7 +53,7 @@ function generateScreen(screenSize = 16) {
   }
 }
 
-function drawingPen(pen = "classic") {
+function drawingPen(pen) {
   const divsInScreen = document.querySelectorAll("#screen div");
   const rainbow = [
     "red",
@@ -40,6 +78,9 @@ function drawingPen(pen = "classic") {
           break;
         case "eraser":
           div.style.backgroundColor = "#D9D9D9";
+          break;
+        default:
+          div.style.backgroundColor = pen;
           break;
       }
     });
