@@ -2,6 +2,8 @@
 
 A web-based recreation of the classic Etch a Sketch drawing toy. Try it here: 
 
+![image](https://github.com/zen-pb/etch-a-sketch/assets/111935236/5ed37439-2411-47a9-b66b-101e57aadd4a)
+
 ## Description
 
 Your favorite toy from the 1960s is now on the web! Etch A Sketch is a simple web app project that recreates the classic mechanical drawing toy but with added functionality. Use your mouse to move the cursor and "draw" on the screen, just like you would turn the knobs on the original Etch A Sketch.
