@@ -38,6 +38,9 @@ function drawingPen(pen = "classic") {
           div.style.backgroundColor = rainbow[rainbowIndex];
           rainbowIndex = (rainbowIndex + 1) % rainbow.length;
           break;
+        case "eraser":
+          div.style.backgroundColor = "#D9D9D9";
+          break;
       }
     });
   });
