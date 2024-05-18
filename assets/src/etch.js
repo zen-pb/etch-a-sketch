@@ -3,6 +3,7 @@ const colorPicker = document.querySelector("#colorPicker");
 const palletteButtons = document.querySelectorAll("#palletteButtons button");
 const canvasSetButtons = document.querySelectorAll("#canvasSetButtons button");
 const customCanvasSize = document.querySelector("#customSize");
+const rangeSize = document.querySelector("#rangeSize");
 
 document.addEventListener("DOMContentLoaded", () => {
   let currentScreenSize = 16;
@@ -116,5 +117,6 @@ function drawingPen(pen) {
 
 function regenerateScreen(currentScreenSize) {
   screen.innerHTML = "";
+  rangeSize.innerHTML = `${currentScreenSize} x ${currentScreenSize}`;
   generateScreen(currentScreenSize);
 }
