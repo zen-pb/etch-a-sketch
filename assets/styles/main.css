@@ -5,6 +5,7 @@
 a::after {
     margin: 0;
     user-select: none;
+    cursor: url("../images/write.png"), auto;
 }
 
 img {
@@ -59,7 +60,6 @@ main {
 .pallette-buttons button,
 .by-buttons button {
     transition: scale 0.1s ease-in-out;
-    cursor: pointer;
 }
 
 
@@ -76,7 +76,6 @@ main {
     -webkit-appearance: none;
     appearance: none;
     border: 3px solid #CAEA26;
-    cursor: pointer;
     border-radius: 50%;
     padding: 0;
     margin: 1vw;
@@ -144,6 +143,7 @@ main {
     height: 10px;
     border-radius: 27px;
     background-color: #efefef;
+    transition: scale 0.1s ease-in-out;
 }
 
 
@@ -154,6 +154,10 @@ main {
     border-radius: 50%;
     border: 5px solid #1a1a1a;
     background-color: #CAEA26;
+}
+
+#customSize::-webkit-slider-thumb:hover {
+    scale: 1.1;
 }
 
 .base {
