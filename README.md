@@ -141,5 +141,3 @@ END
 ## Attributions
 - **pen.png**: Created by Flat Icons from www.flaticon.com
 - **GitHub Mark:** [GitHub Logo](https://github.com/logos)
-
-## License
