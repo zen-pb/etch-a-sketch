@@ -5,7 +5,7 @@
 a::after {
     margin: 0;
     user-select: none;
-    cursor: url("../images/write.png"), auto;
+    cursor: url("../images/cursor.png"), auto;
 }
 
 img {
