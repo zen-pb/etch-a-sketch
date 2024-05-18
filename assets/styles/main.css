@@ -205,6 +205,7 @@ main {
 
 .screen div {
     flex: 1 1 auto;
+    border: 1px solid rgba(0, 0, 0, 0.50);
 }
 
 .knobs {
