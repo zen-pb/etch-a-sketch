@@ -1,6 +1,7 @@
 # Etch-a-Sketch Project
 
-A web-based recreation of the classic Etch a Sketch drawing toy. Try it here: https://zen-pb.github.io/etch-a-sketch/
+A web-based recreation of the classic Etch a Sketch drawing toy. 
+Try it here: https://zen-pb.github.io/etch-a-sketch/
 
 ![image](https://github.com/zen-pb/etch-a-sketch/assets/111935236/5ed37439-2411-47a9-b66b-101e57aadd4a)
 
