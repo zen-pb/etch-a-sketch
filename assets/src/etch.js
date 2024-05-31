@@ -1,3 +1,5 @@
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+
 const screen = document.querySelector("#screen");
 const colorPicker = document.querySelector("#colorPicker");
 const palletteButtons = document.querySelectorAll("#palletteButtons button");
